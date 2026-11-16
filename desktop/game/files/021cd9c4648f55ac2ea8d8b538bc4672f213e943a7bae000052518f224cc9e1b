@@ -1,0 +1,14 @@
+{
+  "hearthmakers:cloth:shadows": {
+    "color": "#1D4577"
+  },
+  "hearthmakers:cloth:midtone": {
+    "color": "#26599A"
+  },
+  "hearthmakers:cloth:hilight": {
+    "color": "#2F6FC0"
+  },
+  "hearthmakers:cloth:rim": {
+    "color": "#3783E3"
+  }
+}

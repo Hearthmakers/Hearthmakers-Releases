@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>Hearthmakers</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/app/favicon-32.png?v=4" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/app/icon-192.png?v=4" />
+    <link rel="apple-touch-icon" href="/app/apple-touch-icon.png?v=4" />
+    <link rel="manifest" href="/app/manifest.webmanifest" />
+    <meta name="theme-color" content="#1c2a44" />
+    <script type="module" crossorigin src="/assets/index-DYBmRgss.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-B7PyhJDg.css">
+  </head>
+  <body>
+    <div id="app">
+      <canvas id="scene"></canvas>
+      <div class="vignette"></div>
+    </div>
+  </body>
+</html>

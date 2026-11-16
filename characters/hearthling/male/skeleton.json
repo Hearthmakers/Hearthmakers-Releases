@@ -1,0 +1,185 @@
+{
+  "type": "rig",
+  "skeleton": {
+    "root": [
+      15.5,
+      15.5,
+      0
+    ],
+    "pelvis": [
+      15.5,
+      15.5,
+      7.5
+    ],
+    "torso": [
+      15.5,
+      15.5,
+      10
+    ],
+    "head": [
+      15.5,
+      15.5,
+      18
+    ],
+    "eyeR": [
+      13,
+      9.5,
+      24
+    ],
+    "eyeL": [
+      18,
+      9.5,
+      24
+    ],
+    "eyeBrowR": [
+      13,
+      9.5,
+      26.5
+    ],
+    "eyeBrowL": [
+      18,
+      9.5,
+      26.5
+    ],
+    "rightShoulder": [
+      10,
+      15.5,
+      15.5
+    ],
+    "rightArm": [
+      8,
+      15,
+      11
+    ],
+    "rightHand": [
+      8,
+      15,
+      10
+    ],
+    "rightThumb1": [
+      9,
+      12,
+      8
+    ],
+    "rightFinger11": [
+      7,
+      13,
+      7
+    ],
+    "rightFinger21": [
+      7,
+      15,
+      7
+    ],
+    "rightFinger31": [
+      7,
+      17,
+      7
+    ],
+    "rightThumb2": [
+      9,
+      12,
+      6
+    ],
+    "rightFinger12": [
+      7,
+      13,
+      5
+    ],
+    "rightFinger22": [
+      7,
+      15,
+      5
+    ],
+    "rightFinger32": [
+      7,
+      17,
+      5
+    ],
+    "mainHand": [
+      8,
+      15,
+      7
+    ],
+    "leftShoulder": [
+      21,
+      15.5,
+      15.5
+    ],
+    "leftArm": [
+      23,
+      15,
+      11
+    ],
+    "leftHand": [
+      23,
+      15,
+      10
+    ],
+    "leftThumb1": [
+      22,
+      12,
+      8
+    ],
+    "leftFinger11": [
+      24,
+      13,
+      7
+    ],
+    "leftFinger21": [
+      24,
+      15,
+      7
+    ],
+    "leftFinger31": [
+      24,
+      17,
+      7
+    ],
+    "leftThumb2": [
+      22,
+      12,
+      6
+    ],
+    "leftFinger12": [
+      24,
+      13,
+      5
+    ],
+    "leftFinger22": [
+      24,
+      15,
+      5
+    ],
+    "leftFinger32": [
+      24,
+      17,
+      5
+    ],
+    "offHand": [
+      23,
+      15,
+      7
+    ],
+    "rightFoot": [
+      12,
+      15.5,
+      5
+    ],
+    "rightToe": [
+      12,
+      12,
+      1
+    ],
+    "leftFoot": [
+      19,
+      15.5,
+      5
+    ],
+    "leftToe": [
+      19,
+      12,
+      1
+    ]
+  }
+}

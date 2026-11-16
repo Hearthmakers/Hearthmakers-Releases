@@ -1,0 +1,175 @@
+{
+  "type": "rig",
+  "skeleton": {
+    "root": [
+      15.5,
+      15.5,
+      0
+    ],
+    "pelvis": [
+      15.5,
+      15.5,
+      7.5
+    ],
+    "torso": [
+      15.5,
+      15.5,
+      10
+    ],
+    "head": [
+      15.5,
+      15.5,
+      16
+    ],
+    "eyeR": [
+      13,
+      9.5,
+      22
+    ],
+    "eyeL": [
+      18,
+      9.5,
+      22
+    ],
+    "rightShoulder": [
+      12,
+      15.5,
+      14
+    ],
+    "rightArm": [
+      9,
+      15,
+      10
+    ],
+    "rightHand": [
+      9,
+      15,
+      9
+    ],
+    "rightThumb1": [
+      10,
+      12,
+      7
+    ],
+    "rightFinger11": [
+      8,
+      13,
+      6
+    ],
+    "rightFinger21": [
+      8,
+      15,
+      6
+    ],
+    "rightFinger31": [
+      8,
+      17,
+      6
+    ],
+    "rightThumb2": [
+      10,
+      12,
+      5
+    ],
+    "rightFinger12": [
+      8,
+      13,
+      4
+    ],
+    "rightFinger22": [
+      8,
+      15,
+      4
+    ],
+    "rightFinger32": [
+      8,
+      17,
+      4
+    ],
+    "mainHand": [
+      9,
+      15,
+      6
+    ],
+    "leftShoulder": [
+      19,
+      15.5,
+      14
+    ],
+    "leftArm": [
+      22,
+      15,
+      10
+    ],
+    "leftHand": [
+      22,
+      15,
+      9
+    ],
+    "leftThumb1": [
+      21,
+      12,
+      7
+    ],
+    "leftFinger11": [
+      23,
+      13,
+      6
+    ],
+    "leftFinger21": [
+      23,
+      15,
+      6
+    ],
+    "leftFinger31": [
+      23,
+      17,
+      6
+    ],
+    "leftThumb2": [
+      21,
+      12,
+      5
+    ],
+    "leftFinger12": [
+      23,
+      13,
+      4
+    ],
+    "leftFinger22": [
+      23,
+      15,
+      4
+    ],
+    "leftFinger32": [
+      23,
+      17,
+      4
+    ],
+    "offHand": [
+      22,
+      15,
+      6
+    ],
+    "rightFoot": [
+      12.5,
+      15.5,
+      5
+    ],
+    "rightToe": [
+      12.5,
+      12,
+      1
+    ],
+    "leftFoot": [
+      18.5,
+      15.5,
+      5
+    ],
+    "leftToe": [
+      18.5,
+      12,
+      1
+    ]
+  }
+}
