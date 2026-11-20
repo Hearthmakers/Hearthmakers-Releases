@@ -1,0 +1,2 @@
+import { createRequire as __hearthmakersRequire } from 'node:module'; const require = __hearthmakersRequire(import.meta.url);
+var r=t(process.env.HEARTHMAKERS_PACKAGE);function t(n){if(!n)return null;try{let e=JSON.parse(n);return typeof e.commit!="string"||typeof e.executable!="string"?null:{commit:e.commit,executable:e.executable}}catch{return null}}export{r as a};

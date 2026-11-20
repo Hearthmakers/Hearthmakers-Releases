@@ -1,0 +1,70 @@
+-- The game server's saves: a row for each record the registry keeps, written again only when that record changes.
+-- Each row's `data` is the record as the registry keeps it (see registry.ts: AccountRecord, CharacterRecord, SavedRealm,
+-- WorldRecord, BlueprintRecord), read back through the same sanitizing as ever. `made` keeps the order records were first
+-- written in (an update leaves it): the order the registry reads them back in.
+
+CREATE TABLE accounts (
+  id text PRIMARY KEY,
+  made bigserial NOT NULL,
+  data jsonb NOT NULL
+);
+
+CREATE TABLE characters (
+  id text PRIMARY KEY,
+  made bigserial NOT NULL,
+  account_id text NOT NULL,
+  data jsonb NOT NULL
+);
+CREATE INDEX characters_account ON characters (account_id);
+
+CREATE TABLE realms (
+  id text PRIMARY KEY,
+  made bigserial NOT NULL,
+  owner_id text NOT NULL,
+  data jsonb NOT NULL
+);
+CREATE INDEX realms_owner ON realms (owner_id);
+
+-- A world's record without its land's edits, which are rows of their own: a dig writes one cell, not the whole world.
+CREATE TABLE worlds (
+  id text PRIMARY KEY,
+  made bigserial NOT NULL,
+  data jsonb NOT NULL
+);
+
+-- The latest edit of each cell of a world's land (encoded "x,y,z,material"); a cell's edit doesn't depend on any other's.
+CREATE TABLE world_terrain (
+  world text NOT NULL,
+  cell text NOT NULL,
+  edit text NOT NULL,
+  PRIMARY KEY (world, cell)
+);
+
+CREATE TABLE blueprints (
+  id text PRIMARY KEY,
+  made bigserial NOT NULL,
+  account_id text NOT NULL,
+  data jsonb NOT NULL
+);
+CREATE INDEX blueprints_account ON blueprints (account_id);
+
+-- What the server keeps once: the board, the public worlds, the sky, the workshop, when the mines closed, the experience
+-- event, the gifts, the parties and chat kept (social), who played (playStats); `made` says the save was started.
+CREATE TABLE server_state (
+  key text PRIMARY KEY,
+  data jsonb NOT NULL
+);
+
+-- The public channels' lines kept for the admins' moderation, oldest first.
+CREATE TABLE chat_log (
+  seq bigserial PRIMARY KEY,
+  at bigint NOT NULL,
+  line jsonb NOT NULL
+);
+CREATE INDEX chat_log_at ON chat_log (at);
+
+-- What the admins did, oldest first.
+CREATE TABLE admin_record (
+  seq bigserial PRIMARY KEY,
+  entry jsonb NOT NULL
+);
