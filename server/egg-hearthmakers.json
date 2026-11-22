@@ -1,0 +1,172 @@
+{
+    "_comment": "DO NOT EDIT: FILE GENERATED AUTOMATICALLY BY PTERODACTYL PANEL - PTERODACTYL.IO",
+    "meta": {
+        "version": "PTDL_v2",
+        "update_url": "https://hearthmakers.the-gearfinder.org/server/egg-hearthmakers.json"
+    },
+    "exported_at": "2026-11-21T00:00:00+00:00",
+    "name": "Hearthmakers",
+    "author": "hearthmakers@example.com",
+    "description": "A Hearthmakers game server: the packaged server (one Linux executable with Node inside) from the Server releases of Hearthmakers/Hearthmakers-Releases. Players add it in the game's Multiplayer window as ws://<address>:<port>; the game in a browser (an https page) needs wss:// through a reverse proxy with a certificate. The server's own panel listens on 127.0.0.1 inside the container only: settings are this egg's variables, commands go in the console (help lists them), and admins also type them in the game's chat. To update, type update in the console, then start the server again.",
+    "features": null,
+    "docker_images": {
+        "Debian": "ghcr.io/pterodactyl/yolks:debian"
+    },
+    "file_denylist": [],
+    "startup": "PORT={{SERVER_PORT}} ./hearthmakers-server-linux-x64",
+    "config": {
+        "files": "{}",
+        "startup": "{\n    \"done\": \"listening on ws://\"\n}",
+        "logs": "{}",
+        "stop": "stop"
+    },
+    "scripts": {
+        "installation": {
+            "script": "#!/bin/bash\n# Hearthmakers: takes the newest packaged server into the server's folder. Server releases are tagged\n# server-<commit> and never marked latest (the latest is the desktop app's), so the newest is picked from the list.\n# Only the executable is written: data/, plugins/ and the rest stay as they are on a reinstall.\nset -e\napt-get update -qq\napt-get install -y -qq curl jq ca-certificates\nmkdir -p /mnt/server\ncd /mnt/server\nURL=$(curl -fsSL \"https://api.github.com/repos/Hearthmakers/Hearthmakers-Releases/releases?per_page=30\" | jq -r '[.[] | select(.tag_name | startswith(\"server-\"))] | sort_by(.published_at) | last | .assets[]? | select(.name == \"hearthmakers-server-linux-x64\") | .browser_download_url')\nif [ -z \"$URL\" ]; then\n  echo \"No Hearthmakers server release was found.\"\n  exit 1\nfi\ncurl -fL -o hearthmakers-server-linux-x64 \"$URL\"\nchmod +x hearthmakers-server-linux-x64\necho \"Installed $URL\"\n",
+            "container": "ghcr.io/pterodactyl/installers:debian",
+            "entrypoint": "bash"
+        }
+    },
+    "variables": [
+        {
+            "name": "Server name",
+            "description": "How the server shows in players' server lists.",
+            "env_variable": "SERVER_NAME",
+            "default_value": "Hearthmakers Server",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string",
+            "field_type": "text"
+        },
+        {
+            "name": "Message of the day",
+            "description": "The line under the server's name in players' server lists.",
+            "env_variable": "SERVER_MOTD",
+            "default_value": "Welcome! Light the fire, raise a home.",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string",
+            "field_type": "text"
+        },
+        {
+            "name": "Server icon",
+            "description": "The server's icon in players' server lists.",
+            "env_variable": "SERVER_ICON",
+            "default_value": "town",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|in:town,citizens,banner,banner_red,banner_green,banner_blue,banner_purple,shield,sword,house,hammer,anvil,axe,pickaxe,wheat,sheep,treasure,book",
+            "field_type": "text"
+        },
+        {
+            "name": "Most players",
+            "description": "How many players may be on at once.",
+            "env_variable": "MAX_PLAYERS",
+            "default_value": "64",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|integer|min:1",
+            "field_type": "text"
+        },
+        {
+            "name": "World threads",
+            "description": "How many threads the worlds are shared among; each holds about 120 MB of its own, so set it by the server's memory. Empty: the machine's cores less one, at most 4 (inside a container that counts the host's cores, not this server's limit).",
+            "env_variable": "WORLD_THREADS",
+            "default_value": "1",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|integer|min:1",
+            "field_type": "text"
+        },
+        {
+            "name": "Realm size",
+            "description": "Side, in blocks, of the realms players make from now on (rounded to an even number, 32 at least); a realm keeps the size it was made with.",
+            "env_variable": "REALM_SIZE",
+            "default_value": "96",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|integer|min:32",
+            "field_type": "text"
+        },
+        {
+            "name": "Characters per account",
+            "description": "How many characters an account may have, unless an admin grants it more.",
+            "env_variable": "MAX_CHARACTERS",
+            "default_value": "3",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|integer|min:1",
+            "field_type": "text"
+        },
+        {
+            "name": "Realms per account",
+            "description": "How many realms an account may have, unless an admin grants it more.",
+            "env_variable": "MAX_REALMS",
+            "default_value": "1",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|integer|min:1",
+            "field_type": "text"
+        },
+        {
+            "name": "Experience rate",
+            "description": "Multiplies the experience pioneers and colonists gain (2 is twice as fast; decimals allowed). The levels' curve stays the game's.",
+            "env_variable": "EXPERIENCE_RATE",
+            "default_value": "1",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|numeric|min:0",
+            "field_type": "text"
+        },
+        {
+            "name": "Small blueprints per account",
+            "description": "How many small blueprints an account may keep, unless an admin grants it more.",
+            "env_variable": "MAX_BLUEPRINTS_SMALL",
+            "default_value": "5",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|integer|min:0",
+            "field_type": "text"
+        },
+        {
+            "name": "Medium blueprints per account",
+            "description": "How many medium blueprints an account may keep, unless an admin grants it more.",
+            "env_variable": "MAX_BLUEPRINTS_MEDIUM",
+            "default_value": "3",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|integer|min:0",
+            "field_type": "text"
+        },
+        {
+            "name": "Large blueprints per account",
+            "description": "How many large blueprints an account may keep, unless an admin grants it more.",
+            "env_variable": "MAX_BLUEPRINTS_LARGE",
+            "default_value": "2",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|integer|min:0",
+            "field_type": "text"
+        },
+        {
+            "name": "Chat channels",
+            "description": "Comma-separated id:scope:Name, the scope global, world or party; global, realm and party need no more than their id.",
+            "env_variable": "CHAT_CHANNELS",
+            "default_value": "global,realm,party",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string",
+            "field_type": "text"
+        },
+        {
+            "name": "Database address",
+            "description": "A Postgres to keep the save in (postgres://user:password@host:5432/name). Empty: the save is kept in data/db in the server's folder.",
+            "env_variable": "DATABASE_URL",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string",
+            "field_type": "text"
+        }
+    ]
+}
