@@ -5,15 +5,15 @@
   ],
   "theme": "hearthmakers",
   "address": "https://hearthmakers.the-gearfinder.org",
-  "author": "",
+  "author": "The Gearfinder Studios",
   "words": {
     "en": {
       "title": "Hearthmakers",
-      "description": ""
+      "description": "A cozy social sandbox built by a passionate team."
     },
     "pt-BR": {
       "title": "Hearthmakers",
-      "description": ""
+      "description": "Um sandbox social aconchegante, criado por uma equipe apaixonada."
     }
   },
   "siteWords": {},
@@ -43,15 +43,69 @@
       "text": null,
       "headings": null
     },
-    "icon": null,
+    "icon": "icon.gif",
     "logo": null,
     "homeLogo": null,
     "homeLogoAlign": "center"
   },
   "layout": {
-    "blocks": [],
+    "blocks": [
+      {
+        "id": "b1",
+        "kind": "about",
+        "place": "sidebar",
+        "titles": {
+          "en": "About Us",
+          "pt-BR": "Sobre Nós"
+        },
+        "texts": {
+          "en": "We're a small team of passionate developers and world builders who seek to bring fun and joy to our friends and family.",
+          "pt-BR": "Somos uma pequena equipe de desenvolvedores e criadores de mundos apaixonados, que buscam levar diversão e alegria aos nossos amigos e familiares."
+        },
+        "align": "justify",
+        "picture": "block-b1.gif",
+        "links": [],
+        "count": 5
+      },
+      {
+        "id": "b2",
+        "kind": "links",
+        "place": "sidebar",
+        "titles": {
+          "en": "Useful Links",
+          "pt-BR": "Links Úteis"
+        },
+        "texts": {
+          "en": "",
+          "pt-BR": ""
+        },
+        "align": "left",
+        "picture": null,
+        "links": [
+          {
+            "url": "https://github.com/Hearthmakers",
+            "labels": {
+              "en": "GitHub",
+              "pt-BR": "GitHub"
+            },
+            "icon": "brands/github",
+            "show": "both"
+          },
+          {
+            "url": "https://discord.gg/wvG9pxJbRN",
+            "labels": {
+              "en": "Discord",
+              "pt-BR": "Discord"
+            },
+            "icon": "brands/discord",
+            "show": "both"
+          }
+        ],
+        "count": 5
+      }
+    ],
     "sidebar": {
-      "home": false,
+      "home": true,
       "post": true,
       "list": true,
       "gallery": true,
@@ -62,6 +116,6 @@
       "en": "",
       "pt-BR": ""
     },
-    "footerAlign": null
+    "footerAlign": "justify"
   }
 }

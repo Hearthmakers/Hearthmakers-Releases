@@ -1,0 +1,64 @@
+{
+  "date": "2026-11-22T01:36:50.512Z",
+  "words": {
+    "en": {
+      "title": "Biomes",
+      "description": "A small preview of the game's biomes!"
+    },
+    "pt-BR": {
+      "title": "Biomas",
+      "description": "Uma pequena prévia dos biomas do jogo!"
+    }
+  },
+  "categories": [],
+  "pictures": [
+    {
+      "file": "captura-de-tela-2026-11-18-173602.png",
+      "captions": {
+        "en": "Forest",
+        "pt-BR": "Floresta"
+      },
+      "descriptions": {
+        "en": "The game's default biome, the forest. A great starting point for new players.",
+        "pt-BR": "Bioma padrão do jogo, a floresta. Um bom começo para novos jogadores."
+      },
+      "category": null
+    },
+    {
+      "file": "captura-de-tela-2026-11-18-173747.png",
+      "captions": {
+        "en": "Arctic",
+        "pt-BR": "Ártico"
+      },
+      "descriptions": {
+        "en": "Arctic biome. Snowstorms and a more hostile environment than the Forests.",
+        "pt-BR": "Bioma de ártico. Tempestades de neve e um ambiente mais hostil do que as Florestas."
+      },
+      "category": null
+    },
+    {
+      "file": "captura-de-tela-2026-11-18-173858.png",
+      "captions": {
+        "en": "Desert",
+        "pt-BR": "Deserto"
+      },
+      "descriptions": {
+        "en": "Desert biome. A true challenge for setting up your colony.",
+        "pt-BR": "Bioma de deserto. Um verdadeiro desafio para montar sua colônia."
+      },
+      "category": null
+    },
+    {
+      "file": "captura-de-tela-2026-11-18-173951.png",
+      "captions": {
+        "en": "Industrial",
+        "pt-BR": "Industrial"
+      },
+      "descriptions": {
+        "en": "Industrial biome. A zone rich in ores, but with little fertility for crops.",
+        "pt-BR": "Bioma industrial. Uma zona rica em minérios, porém com pouca fertilidade para plantações."
+      },
+      "category": null
+    }
+  ]
+}
