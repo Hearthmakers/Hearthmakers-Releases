@@ -1,0 +1,67 @@
+{
+  "languages": [
+    "en",
+    "pt-BR"
+  ],
+  "theme": "hearthmakers",
+  "address": "https://hearthmakers.the-gearfinder.org",
+  "author": "",
+  "words": {
+    "en": {
+      "title": "Hearthmakers",
+      "description": ""
+    },
+    "pt-BR": {
+      "title": "Hearthmakers",
+      "description": ""
+    }
+  },
+  "siteWords": {},
+  "links": [],
+  "sections": [],
+  "menu": [
+    {
+      "kind": "posts"
+    },
+    {
+      "kind": "gallery"
+    }
+  ],
+  "bar": {
+    "sticky": true,
+    "folds": false,
+    "languages": "auto"
+  },
+  "look": {
+    "colors": {
+      "accent": null,
+      "background": null,
+      "surface": null,
+      "text": null
+    },
+    "fonts": {
+      "text": null,
+      "headings": null
+    },
+    "icon": null,
+    "logo": null,
+    "homeLogo": null,
+    "homeLogoAlign": "center"
+  },
+  "layout": {
+    "blocks": [],
+    "sidebar": {
+      "home": false,
+      "post": true,
+      "list": true,
+      "gallery": true,
+      "page": true
+    },
+    "side": "right",
+    "footer": {
+      "en": "",
+      "pt-BR": ""
+    },
+    "footerAlign": null
+  }
+}
