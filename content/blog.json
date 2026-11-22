@@ -21,10 +21,32 @@
   "sections": [],
   "menu": [
     {
-      "kind": "posts"
+      "kind": "posts",
+      "labels": {
+        "en": "Blog",
+        "pt-BR": "Blog"
+      },
+      "icon": "solid/signs-post",
+      "show": "both"
     },
     {
-      "kind": "gallery"
+      "kind": "gallery",
+      "labels": {
+        "en": "Gallery",
+        "pt-BR": "Galeria"
+      },
+      "icon": "brands/flipboard",
+      "show": "both"
+    },
+    {
+      "kind": "page",
+      "slug": "downloads",
+      "labels": {
+        "en": "Downloads",
+        "pt-BR": "Downloads"
+      },
+      "icon": "solid/download",
+      "show": "both"
     }
   ],
   "bar": {
