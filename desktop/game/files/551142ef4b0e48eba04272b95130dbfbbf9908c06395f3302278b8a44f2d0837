@@ -1,0 +1,8 @@
+{
+  "items/miner_lantern/model.qb": [
+    { "surface": "flame", "matrix": "lantern", "color": "#e8642c" },
+    { "surface": "glow", "matrix": "lantern", "color": "#e2b443" }
+  ],
+  "characters/hearthling/male/skeleton/head.qb": [{ "surface": "ember", "color": "#e8642c" }],
+  "characters/hearthling/female/skeleton/head.qb": [{ "surface": "ember", "color": "#e8642c" }]
+}
