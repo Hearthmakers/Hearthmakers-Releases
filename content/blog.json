@@ -68,7 +68,7 @@
     "icon": "icon.gif",
     "logo": null,
     "homeLogo": null,
-    "homeLogoAlign": "center"
+    "homeLogoAlign": "right"
   },
   "layout": {
     "blocks": [
@@ -120,6 +120,33 @@
               "pt-BR": "Discord"
             },
             "icon": "brands/discord",
+            "show": "both"
+          },
+          {
+            "url": "https://www.youtube.com/@Hearthmakers",
+            "labels": {
+              "en": "YouTube",
+              "pt-BR": "YouTube"
+            },
+            "icon": "brands/youtube",
+            "show": "both"
+          },
+          {
+            "url": "https://x.com/RumiExMachina",
+            "labels": {
+              "en": "Twitter X",
+              "pt-BR": "Twitter X"
+            },
+            "icon": "brands/square-x-twitter",
+            "show": "both"
+          },
+          {
+            "url": "https://www.patreon.com/cw/hearthmakers",
+            "labels": {
+              "en": "Patreon",
+              "pt-BR": "Patreon"
+            },
+            "icon": "brands/patreon",
             "show": "both"
           }
         ],
